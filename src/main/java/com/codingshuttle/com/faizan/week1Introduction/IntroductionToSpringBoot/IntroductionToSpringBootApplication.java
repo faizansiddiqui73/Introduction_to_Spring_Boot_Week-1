@@ -14,16 +14,22 @@ public class IntroductionToSpringBootApplication implements CommandLineRunner {
     // it is required.
     //Therefor the Apple is dependency injection for the IntroductionToSpringBootApplication
     @Autowired
-    Apple obj;
+    Apple apple1;
+
+    @Autowired
+    Apple apple2;
 
     public static void main(String[] args) {
-
         SpringApplication.run(IntroductionToSpringBootApplication.class, args);
 
     }
 
     @Override
     public void run(String... args) throws Exception {
-        obj.eatApple();
+        apple1.eatApple();
+        apple2.eatApple();
+        System.out.println(apple1.hashCode());
+        System.out.println(apple2.hashCode());
+
     }
 }

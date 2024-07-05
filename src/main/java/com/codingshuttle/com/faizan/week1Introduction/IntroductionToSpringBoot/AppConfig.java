@@ -5,7 +5,9 @@ import org.springframework.context.annotation.Configuration;
 
 //This is the expilicit based creation of bean Now we need to remove the component annotation in apple class
 //coz 2 beans are found
-@Configuration // Bean is built and it is injected in IntroductionToSpringBootApplication
+@Configuration
+// Bean is built and it is injected in IntroductionToSpringBootApplication
+
 public class AppConfig {
 
     @Bean

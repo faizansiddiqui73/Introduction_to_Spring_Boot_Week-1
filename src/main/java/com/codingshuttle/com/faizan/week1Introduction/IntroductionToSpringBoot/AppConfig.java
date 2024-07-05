@@ -2,6 +2,7 @@ package com.codingshuttle.com.faizan.week1Introduction.IntroductionToSpringBoot;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Scope;
 
 //This is the expilicit based creation of bean Now we need to remove the component annotation in apple class
 //coz 2 beans are found
@@ -11,6 +12,7 @@ import org.springframework.context.annotation.Configuration;
 public class AppConfig {
 
     @Bean
+    @Scope("prototype")
     Apple getApple() {
         return new Apple();
     }

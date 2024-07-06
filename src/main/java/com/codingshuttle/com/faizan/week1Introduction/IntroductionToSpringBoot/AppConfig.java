@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Scope;
 public class AppConfig {
 
     @Bean
-    @Scope("prototype")
+    @Scope("singleton")
     Apple getApple() {
         return new Apple();
     }

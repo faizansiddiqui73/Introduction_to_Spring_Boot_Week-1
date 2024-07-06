@@ -5,8 +5,15 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DBService implements DB{
-    @Autowired
-    DB db; //loose coupling achieved by interface
+//    @Autowired //Field Injection
+//    DB db;
+
+    //Constructor injection
+    final private DB db;
+
+    public DBService(DB db){
+        this.db = db;
+    }
 
     public String getData() {
         return db.getData();

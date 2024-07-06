@@ -4,13 +4,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class DBService {
-
-
+public class DBService implements DB{
     @Autowired
-    private DevDB devDB; //tightly Coupled
+    DB db; //loose coupling achieved by interface
 
-    String getData() {
-        return devDB.getData();
+    public String getData() {
+        return db.getData();
     }
 }
